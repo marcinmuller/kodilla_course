@@ -1,7 +1,12 @@
 package com.kodilla.stream.iterate;
 
-/**
- * Created by Marcin Muller on 26.07.17.
- */
-public class NumbersGenerator {
+import java.util.stream.*;
+
+public final class NumbersGenerator {
+    public static void generateEven(int max) {
+        Stream.iterate(1, n -> n + 1)
+                .limit(max)
+                .filter(n -> n % 2 == 0)
+                .forEach(System.out::println);
+    }
 }
