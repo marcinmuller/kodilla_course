@@ -146,7 +146,7 @@ public class BoardTestSuite {
         double tasks =project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(s->s.getTasks().stream())
-                .mapToLong(s->s.getCreated().until(LocalDate.now(),DAYS))
+                .mapToDouble(s->s.getCreated().until(LocalDate.now(),DAYS))
                 .average()
                 .getAsDouble();
 
