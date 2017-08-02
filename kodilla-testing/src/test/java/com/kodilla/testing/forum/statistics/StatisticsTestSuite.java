@@ -14,1011 +14,828 @@ import static org.mockito.Mockito.when;
  */
 public class StatisticsTestSuite {
     @Test
-    public void testCalculateAdvStatistics11(){
+    public void testCalculateAdvStatisticscommentsNumberNoPosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int commentsNumber = statisticsCalculator.getCommentsNumber();
         //Then
         System.out.println("1 0 postów");
-        Assert.assertEquals(10, commentsNumber );
+        Assert.assertEquals(10, commentsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics12(){
+    public void testCalculateAdvStatisticsUsersNumberNOPosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int usersNumber = statisticsCalculator.getUsersNumber();
         //Then
         System.out.println("1 0 postów");
-        Assert.assertEquals(100,usersNumber );
+        Assert.assertEquals(100, usersNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics13(){
+    public void testCalculateAdvStatisticsPostsNumberNoPosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int postsNumber = statisticsCalculator.getPostsNumber();
         //Then
         System.out.println("1 0 postów");
-        Assert.assertEquals(0,postsNumber );
+        Assert.assertEquals(0, postsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics14(){
+    public void testCalculateAdvStatisticsComPPostNoPosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerPost = statisticsCalculator.getCommentsPerPost();
         //Then
         System.out.println("1 0 postów");
-        Assert.assertEquals(0, commentsPerPost,0);
+        Assert.assertEquals(0, commentsPerPost, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics15(){
+    public void testCalculateAdvStatisticsPostsPuserNoPosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double postsPerUser = statisticsCalculator.getPostsPerUser();
         //Then
         System.out.println("1 0 postów");
-        Assert.assertEquals(0, postsPerUser,0 );
+        Assert.assertEquals(0, postsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics16(){
+    public void testCalculateAdvStatisticsComPUserNoPosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
         //Then
         System.out.println("1 0 postów");
-        Assert.assertEquals(0.1,commentsPerUser,0);
+        Assert.assertEquals(0.1, commentsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics21(){
+    public void testCalculateAdvStatisticsComNumber1000() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(1000);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int commentsNumber = statisticsCalculator.getCommentsNumber();
         //Then
         System.out.println("2 1000 postów");
-        Assert.assertEquals(10,commentsNumber );
+        Assert.assertEquals(10, commentsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics22(){
+    public void testCalculateAdvStatisticsUserNumber1000() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(1000);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int usersNumber = statisticsCalculator.getUsersNumber();
         //Then
         System.out.println("2 1000 postów");
-        Assert.assertEquals(100,usersNumber );
+        Assert.assertEquals(100, usersNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics23(){
+    public void testCalculateAdvStatisticspostNumber1000() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(1000);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int postsNumber = statisticsCalculator.getPostsNumber();
         //Then
         System.out.println("2 1000 postów");
-        Assert.assertEquals(1000,postsNumber );
+        Assert.assertEquals(1000, postsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics24(){
+    public void testCalculateAdvStatisticsComPPost1000() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(1000);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerPost = statisticsCalculator.getCommentsPerPost();
         //Then
         System.out.println("2 1000 postów");
-        Assert.assertEquals(0.01,commentsPerPost,0);
+        Assert.assertEquals(0.01, commentsPerPost, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics25(){
+    public void testCalculateAdvStatisticsPostPuser1000() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(1000);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double postsPerUser = statisticsCalculator.getPostsPerUser();
         //Then
         System.out.println("2 1000 postów");
-        Assert.assertEquals(10,postsPerUser,0);
+        Assert.assertEquals(10, postsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics26(){
+    public void testCalculateAdvStatisticsComPUser1000() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(1000);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
         //Then
         System.out.println("2 1000 postów");
-        Assert.assertEquals(0.1,commentsPerUser,0);
+        Assert.assertEquals(0.1, commentsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics31(){
+    public void testCalculateAdvStatisticsCommNoCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(0);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int commentsNumber = statisticsCalculator.getCommentsNumber();
         //Then
         System.out.println("3 0 komentarzy");
-        Assert.assertEquals(0,commentsNumber);
+        Assert.assertEquals(0, commentsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics32(){
+    public void testCalculateAdvStatisticsUserNumberNoCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(0);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int usersNumber = statisticsCalculator.getUsersNumber();
         //Then
         System.out.println("3 0 komentarzy");
-        Assert.assertEquals(100,usersNumber );
+        Assert.assertEquals(100, usersNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics33(){
+    public void testCalculateAdvStatisticspostNumberNoCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(0);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int postsNumber = statisticsCalculator.getPostsNumber();
         //Then
         System.out.println("3 0 komentarzy");
-        Assert.assertEquals(0,postsNumber);
+        Assert.assertEquals(0, postsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics34(){
+    public void testCalculateAdvStatisticsComPpostNoCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(0);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerPost = statisticsCalculator.getCommentsPerPost();
         //Then
         System.out.println("3 0 komentarzy");
-        Assert.assertEquals(0,commentsPerPost,0);
+        Assert.assertEquals(0, commentsPerPost, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics35(){
+    public void testCalculateAdvStatisticsPostPUserNoCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(0);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double postsPerUser = statisticsCalculator.getPostsPerUser();
         //Then
         System.out.println("3 0 komentarzy");
-        Assert.assertEquals(0,postsPerUser,0 );
+        Assert.assertEquals(0, postsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics36(){
+    public void testCalculateAdvStatisticsComPusreNoCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(0);
         when(statistics.postsCount()).thenReturn(0);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
         //Then
         System.out.println("3 0 komentarzy");
-        Assert.assertEquals(0,commentsPerUser,0);
+        Assert.assertEquals(0, commentsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics41(){
+    public void testCalculateAdvStatisticsComNumberMorePosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int commentsNumber = statisticsCalculator.getCommentsNumber();
         //Then
         System.out.println("4 gdy liczba komentarzy < liczba postów");
-        Assert.assertEquals(10,commentsNumber);
+        Assert.assertEquals(10, commentsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics42(){
+    public void testCalculateAdvStatisticsuserNumberMorePosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int usersNumber = statisticsCalculator.getUsersNumber();
         //Then
         System.out.println("4 gdy liczba komentarzy < liczba postów");
-        Assert.assertEquals(100,usersNumber);
+        Assert.assertEquals(100, usersNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics43(){
+    public void testCalculateAdvStatisticspostsNUmberMOrePosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int postsNumber = statisticsCalculator.getPostsNumber();
         //Then
         System.out.println("4 gdy liczba komentarzy < liczba postów");
-        Assert.assertEquals(100,postsNumber );
+        Assert.assertEquals(100, postsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics44(){
+    public void testCalculateAdvStatisticscommentsPerPostmorePosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerPost = statisticsCalculator.getCommentsPerPost();
         //Then
         System.out.println("4 gdy liczba komentarzy < liczba postów");
-        Assert.assertEquals(0.1, commentsPerPost,0);
+        Assert.assertEquals(0.1, commentsPerPost, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics45(){
+    public void testCalculateAdvStatisticspostsPerUsermorePosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double postsPerUser = statisticsCalculator.getPostsPerUser();
         //Then
         System.out.println("4 gdy liczba komentarzy < liczba postów");
-        Assert.assertEquals(1,postsPerUser ,0);
+        Assert.assertEquals(1, postsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics46(){
+    public void testCalculateAdvStatisticscommentsPerUserMOrePosts() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
         //Then
         System.out.println("4 gdy liczba komentarzy < liczba postów");
-        Assert.assertEquals(0.1,commentsPerUser,0);
+        Assert.assertEquals(0.1, commentsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics51(){
+    public void testCalculateAdvStatisticscommentsPerUserMoreCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(100);
         when(statistics.postsCount()).thenReturn(10);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int commentsNumber = statisticsCalculator.getCommentsNumber();
         //Then
         System.out.println("5 gdy liczba komentarzy > liczba postów");
-        Assert.assertEquals(100,commentsNumber );
+        Assert.assertEquals(100, commentsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics52(){
+    public void testCalculateAdvStatisticsusersNumbermoreCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(100);
         when(statistics.postsCount()).thenReturn(10);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int usersNumber = statisticsCalculator.getUsersNumber();
         //Then
         System.out.println("5 gdy liczba komentarzy > liczba postów");
-        Assert.assertEquals(100,usersNumber );
+        Assert.assertEquals(100, usersNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics53(){
+    public void testCalculateAdvStatisticspostsNumberMoreCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(100);
         when(statistics.postsCount()).thenReturn(10);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int postsNumber = statisticsCalculator.getPostsNumber();
         //Then
         System.out.println("5 gdy liczba komentarzy > liczba postów");
-        Assert.assertEquals(10,postsNumber);
+        Assert.assertEquals(10, postsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics54(){
+    public void testCalculateAdvStatisticscommentsPerPostmoeCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(100);
         when(statistics.postsCount()).thenReturn(10);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerPost = statisticsCalculator.getCommentsPerPost();
         //Then
         System.out.println("5 gdy liczba komentarzy > liczba postów");
-        Assert.assertEquals(10,commentsPerPost,0 );
+        Assert.assertEquals(10, commentsPerPost, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics55(){
+    public void testCalculateAdvStatisticspostsPerUserMOreCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(100);
         when(statistics.postsCount()).thenReturn(10);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double postsPerUser = statisticsCalculator.getPostsPerUser();
         //Then
         System.out.println("5 gdy liczba komentarzy > liczba postów");
-        Assert.assertEquals(0.1,postsPerUser,0 );
+        Assert.assertEquals(0.1, postsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics56(){
+    public void testCalculateAdvStatisticscommentPerUserMoreCom() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(100);
         when(statistics.postsCount()).thenReturn(10);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
         //Then
         System.out.println("5 gdy liczba komentarzy > liczba postów");
-        Assert.assertEquals(1, commentsPerUser ,0);
+        Assert.assertEquals(1, commentsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics61(){
+    public void testCalculateAdvStatisticscommentsNumberNoUser() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
      /*   for(int i=0;i<100;i++){
             usersNames.add("aaa"+i);
         }*/
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int commentsNumber = statisticsCalculator.getCommentsNumber();
         //Then
         System.out.println("6 gdy gdy liczba użytkowników = 0");
-        Assert.assertEquals(10,commentsNumber );
+        Assert.assertEquals(10, commentsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics62(){
+    public void testCalculateAdvStatisticsusersNumberNousers() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-     /*   for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
-        }*/
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int usersNumber = statisticsCalculator.getUsersNumber();
         //Then
         System.out.println("6 gdy gdy liczba użytkowników = 0");
-        Assert.assertEquals(0,usersNumber );
+        Assert.assertEquals(0, usersNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics63(){
+    public void testCalculateAdvStatisticspostsNumberNOusers() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-     /*   for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
-        }*/
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int postsNumber = statisticsCalculator.getPostsNumber();
         //Then
         System.out.println("6 gdy gdy liczba użytkowników = 0");
-        Assert.assertEquals(100,postsNumber );
+        Assert.assertEquals(100, postsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics64(){
+    public void testCalculateAdvStatisticscommentsPerPostNoUsers() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-     /*   for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
-        }*/
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
-        //Then
-        System.out.println("6 gdy gdy liczba użytkowników = 0");;
-        Assert.assertEquals(0.1, commentsPerPost,0 );
-    }
-    @Test
-    public void testCalculateAdvStatistics65(){
-        //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-     /*   for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
-        }*/
-        when(statistics.commentsCount()).thenReturn(10);
-        when(statistics.postsCount()).thenReturn(100);
-        when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
-        //When
-        statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerPost = statisticsCalculator.getCommentsPerPost();
         //Then
         System.out.println("6 gdy gdy liczba użytkowników = 0");
-        Assert.assertEquals(0,postsPerUser,0 );
+        ;
+        Assert.assertEquals(0.1, commentsPerPost, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics66(){
+    public void testCalculateAdvStatisticspostsPerUserNoUsers() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-     /*   for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
-        }*/
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double postsPerUser = statisticsCalculator.getPostsPerUser();
         //Then
         System.out.println("6 gdy gdy liczba użytkowników = 0");
-        Assert.assertEquals(0,commentsPerUser ,0);
+        Assert.assertEquals(0, postsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics71(){
+    public void testCalculateAdvStatisticscommentsPerUserNoUsers() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        when(statistics.commentsCount()).thenReturn(10);
+        when(statistics.postsCount()).thenReturn(100);
+        when(statistics.usersNames()).thenReturn(usersNames);
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
+        //When
+        statisticsCalculator.calculateAdvStatistics(statistics);
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
+        //Then
+        System.out.println("6 gdy gdy liczba użytkowników = 0");
+        Assert.assertEquals(0, commentsPerUser, 0);
+    }
+
+    @Test
+    public void testCalculateAdvStatisticscommentsNumber100() {
+        //Given
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int commentsNumber = statisticsCalculator.getCommentsNumber();
         //Then
         System.out.println("7 gdy liczba użytkowników = 100");
-        Assert.assertEquals(10,commentsNumber );
+        Assert.assertEquals(10, commentsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics72(){
+    public void testCalculateAdvStatisticsusersNumber100() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int usersNumber = statisticsCalculator.getUsersNumber();
         //Then
         System.out.println("7 gdy liczba użytkowników = 100");
-        Assert.assertEquals(100,usersNumber );
+        Assert.assertEquals(100, usersNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics73(){
+    public void testCalculateAdvStatisticspostsNumber100() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        int postsNumber = statisticsCalculator.getPostsNumber();
         //Then
         System.out.println("7 gdy liczba użytkowników = 100");
-        Assert.assertEquals(100,postsNumber );
+        Assert.assertEquals(100, postsNumber);
     }
+
     @Test
-    public void testCalculateAdvStatistics74(){
+    public void testCalculateAdvStatisticscommentsPerPost100() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerPost = statisticsCalculator.getCommentsPerPost();
         //Then
         System.out.println("7 gdy liczba użytkowników = 100");
-        Assert.assertEquals(0.1,commentsPerPost,0 );
+        Assert.assertEquals(0.1, commentsPerPost, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics75(){
+    public void testCalculateAdvStatisticspostsPerUser100() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double postsPerUser = statisticsCalculator.getPostsPerUser();
         //Then
         System.out.println("7 gdy liczba użytkowników = 100");
-        Assert.assertEquals(1,postsPerUser,0 );
+        Assert.assertEquals(1, postsPerUser, 0);
     }
+
     @Test
-    public void testCalculateAdvStatistics76(){
+    public void testCalculateAdvStatisticscommentsPerUser100() {
         //Given
-        Statistics statistics=mock(Statistics.class);
-        List<String> usersNames=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            usersNames.add("aaa"+i);
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
         }
         when(statistics.commentsCount()).thenReturn(10);
         when(statistics.postsCount()).thenReturn(100);
         when(statistics.usersNames()).thenReturn(usersNames);
-        StatisticsCalculator statisticsCalculator=new StatisticsCalculator();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statistics);
-        int commentsNumber=statisticsCalculator.getCommentsNumber();
-        int usersNumber=statisticsCalculator.getUsersNumber();
-        int postsNumber=statisticsCalculator.getPostsNumber();
-        double commentsPerUser=statisticsCalculator.getCommentsPerUser();
-        double postsPerUser=statisticsCalculator.getPostsPerUser();
-        double commentsPerPost=statisticsCalculator.getCommentsPerPost();
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
         //Then
         System.out.println("7 gdy liczba użytkowników = 100");
-        Assert.assertEquals( 0.1,commentsPerUser ,0);
+        Assert.assertEquals(0.1, commentsPerUser, 0);
     }
 }

@@ -1,3 +1,6 @@
 include 'kodilla-testing'
 include 'kodilla-stream '
+include 'kodilla_stream'
+include 'kodilla-stream'
+include 'stream'
 
