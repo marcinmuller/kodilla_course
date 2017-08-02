@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Marcin Muller on 26.07.17.
  */
-public class Forum {
+public final class Forum {
     private final List<ForumUser> forumUsersList=new ArrayList<>();
 
     public Forum() {
