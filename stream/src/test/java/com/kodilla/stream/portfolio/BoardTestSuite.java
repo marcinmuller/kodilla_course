@@ -120,39 +120,17 @@ public class BoardTestSuite {
         //given
         Board project =prepareTestData();
         //when
-        List<TaskList> inProgressTasks = new ArrayList<>();
-        inProgressTasks.add(new TaskList("In progress"));
-        long tasks=project.getTaskLists().stream()
-                .filter(inProgressTasks::contains)
-                .flatMap(s->s.getTasks().stream())
-                .map(s->s.getCreated())
-                .map(s->s.until(LocalDate.now(),DAYS))
-                .reduce(0L,(s,t)->s=s+t);
-
-        long quantity=project.getTaskLists().stream()
-                .filter(inProgressTasks::contains)
-                .flatMap(s->s.getTasks().stream())
-                .count();
-
-        System.out.println("średnia ilość dni to "+tasks/quantity);
+        double result=project.getAverageWorking();
+        //then
+        Assert.assertEquals(10,result,0);
     }
     @Test
     public void testAddTaskListAverageWorkingOnTask1() {
         //given
         Board project = prepareTestData();
         //when
-        List<TaskList> inProgressTasks = new ArrayList<>();
-        inProgressTasks.add(new TaskList("In progress"));
-        double tasks =project.getTaskLists().stream()
-                .filter(inProgressTasks::contains)
-                .flatMap(s->s.getTasks().stream())
-                .mapToDouble(s->s.getCreated().until(LocalDate.now(),DAYS))
-                .average()
-                .getAsDouble();
-
-        System.out.println("średnia to "+tasks);
-
-
-
+        double result=project.getAverageWorking1();
+        //then
+        Assert.assertEquals(10,result,0);
     }
 }
