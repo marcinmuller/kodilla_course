@@ -13,11 +13,10 @@ public class Flightmap {
         map.put("Palermo",true);
         map.put("Syrakuzy",false);
         map.put("Trapani",true);
-        if(map.get(flight.getDestination())!=null) {
-            if(map.get(flight.getDestination())==true) System.out.println(flight.getOrigin()+" ---> "+flight.getDestination());
+        if(map.containsKey(flight.getDestination())){
+            if( map.get(flight.getDestination()))System.out.println(flight.getOrigin()+" ---> "+flight.getDestination());
             else System.out.println(flight.getOrigin()+" -/-> "+flight.getDestination());
-        }
-        throw new RouteNotFoundException(flight.getDestination());
+        }else throw new RouteNotFoundException(flight.getDestination());
 
     }
 }

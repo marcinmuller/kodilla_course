@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.collection.CollectionTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-07-25T22:54:59" hostname="iliak-HP-15-Notebook-PC" time="0.012">
+  <properties/>
+  <testcase name="testOddNumbersExterminatorEmptyList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.006"/>
+  <testcase name="testOddNumbersExterminatorNormalListAll" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.002"/>
+  <testcase name="testOddNumbersExterminatorNormalListOdd" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.001"/>
+  <testcase name="testOddNumbersExterminatorNormalListTwoTimes" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.001"/>
+  <testcase name="testOddNumbersExterminatorNormalListEven" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.0"/>
+  <testcase name="testOddNumbersExterminatorNormalListZero" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.0"/>
+  <system-out><![CDATA[beginning of testOddNumbersExterminatorEmptyList
+test: testOddNumbersExterminatorEmptyList in progress
+end
+beginning of testOddNumbersExterminatorNormalListAll
+test: testOddNumbersExterminatorNormalListAll in progress
+end
+beginning of testOddNumbersExterminatorNormalListOdd
+test: testOddNumbersExterminatorNormalListOdd in progress
+end
+beginning of testOddNumbersExterminatorNormalListTwoTimes
+test: testOddNumbersExterminatorNormalListTwoTimes in progress
+end
+beginning of testOddNumbersExterminatorNormalListEven
+test: testOddNumbersExterminatorNormalListEven in progress
+end
+beginning of testOddNumbersExterminatorNormalListZero
+test: testOddNumbersExterminatorNormalListZero in progress
+end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

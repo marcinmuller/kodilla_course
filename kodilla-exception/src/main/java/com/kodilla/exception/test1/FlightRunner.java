@@ -10,7 +10,7 @@ public class FlightRunner {
         Flight flight3=new Flight("Radom", "Segesta");
         Flightmap flightmap=new Flightmap();
         try {
-            flightmap.findFilght(flight3);
+            flightmap.findFilght(flight1);
         }catch (RouteNotFoundException e){
             System.out.println("error!!!!"+e);
         }
