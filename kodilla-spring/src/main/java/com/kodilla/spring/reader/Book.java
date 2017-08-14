@@ -1,7 +1,13 @@
 package com.kodilla.spring.reader;
 
-/**
- * Created by Marcin Muller on 13.08.17.
- */
-public class Book {
+public final class Book {
+    final String title;
+
+    public Book(final String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

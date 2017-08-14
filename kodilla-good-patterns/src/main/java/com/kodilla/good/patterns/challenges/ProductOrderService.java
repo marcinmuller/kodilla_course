@@ -8,9 +8,17 @@ public class ProductOrderService {
         OrderRetriever orderRetriever=new OrderRetriever();
         Order order=orderRetriever.retrieve();
 
-        OrderProcessor orderProcessor=new OrderProcessor(new EmailSending(), new SendByPost(), new InventoryBalanceOne());
-        orderProcessor.process(order);
-
-
+        OrderProcessor orderProcessor=new OrderProcessor(new EmailSending(), new SendByPost(), new InventoryBalanceImpl());
+        if (orderProcessor.process(order)) {
+            System.out.println(" zamówienie zrealizowane");
+        } else {
+            System.out.println(" zamówienie niezrealizowane");
+        }
+        Order order1=orderRetriever.retrieve();
+        orderProcessor.process(order1);
+        Order order2=orderRetriever.retrieve();
+        orderProcessor.process(order2);
+        Order order3=orderRetriever.retrieve();
+        orderProcessor.process(order3);
     }
 }

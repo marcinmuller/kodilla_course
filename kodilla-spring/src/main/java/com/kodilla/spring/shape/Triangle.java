@@ -1,7 +1,11 @@
 package com.kodilla.spring.shape;
 
-/**
- * Created by Marcin Muller on 11.08.17.
- */
-public class Triangle {
+import org.springframework.stereotype.Component;
+
+@Component
+public class Triangle implements Shape {
+    @Override
+    public String getShapeName() {
+        return "This is a triangle.";
+    }
 }

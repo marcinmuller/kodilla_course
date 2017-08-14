@@ -1,7 +1,15 @@
 package com.kodilla.spring.reader;
 
-/**
- * Created by Marcin Muller on 13.08.17.
- */
-public class Reader {
+import org.springframework.beans.factory.annotation.Autowired;
+
+public final class Reader {
+    final Book theBook;
+
+    public Reader(final Book theBook) {
+        this.theBook = theBook;
+    }
+
+    public void read() {
+        System.out.println("Reading: " + theBook.getTitle());
+    }
 }

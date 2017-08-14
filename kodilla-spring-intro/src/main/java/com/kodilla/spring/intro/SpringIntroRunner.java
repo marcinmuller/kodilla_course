@@ -1,7 +1,7 @@
 package com.kodilla.spring.intro;
 
-/**
- * Created by Marcin Muller on 08.08.17.
- */
 public class SpringIntroRunner {
+    public static void main(String[] args) {
+        System.out.println("Welcome into the intro to spring");
+    }
 }

@@ -5,4 +5,5 @@ package com.kodilla.good.patterns.challenges;
  */
 public interface Storage {
     public boolean checkAvailability(String name);
+    public void inventoryBalanceRefreshment();
 }

@@ -6,21 +6,23 @@ package com.kodilla.good.patterns.challenges;
 public class OrderProcessor {
     private MessageSendingSystem messageSendingSystem;
     private ProductSendingSystem productSendingSystem;
-    private InventoryBalance inventoryBalance;
+    private InventoryBalanceService inventoryBalanceService;
 
-    public OrderProcessor(MessageSendingSystem messageSendingSystem, ProductSendingSystem productSendingSystem, InventoryBalance inventoryBalance) {
+    public OrderProcessor(MessageSendingSystem messageSendingSystem, ProductSendingSystem productSendingSystem, InventoryBalanceService inventoryBalanceService) {
         this.messageSendingSystem = messageSendingSystem;
         this.productSendingSystem = productSendingSystem;
-        this.inventoryBalance = inventoryBalance;
+        this.inventoryBalanceService = inventoryBalanceService;
     }
 
-    public void process(Order order){
-        if(order.getProduct().getAvailability()) {
+    public boolean process(Order order){
+        if(order.getProduct().isAvailable()) {
             productSendingSystem.send(order);
-            inventoryBalance.updateInventoryBalance(order);
+            inventoryBalanceService.updateInventoryBalance(order);
             messageSendingSystem.sendMessage(order);
+            return true;
         }else{
             System.out.println(order.getProduct().getName()+" - brak w magazynie");
+            return false;
         }
     }
 }

@@ -1,7 +1,9 @@
 package com.kodilla.spring.intro.shape;
 
-/**
- * Created by Marcin Muller on 08.08.17.
- */
-public class Circle {
+public class Circle implements Shape {
+    @Override
+    public String draw() {
+        System.out.println("This is a circle");
+        return "This is a circle";
+    }
 }

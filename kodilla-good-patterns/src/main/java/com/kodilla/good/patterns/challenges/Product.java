@@ -6,10 +6,11 @@ package com.kodilla.good.patterns.challenges;
 public class Product {
     private String name;
     private boolean availability;
+    private Storage storage;
 
     public Product(String name,Storage storage) {
         this.name = name;
-//        Storage storage=new StorageOne();
+        this.storage=storage;
         availability=storage.checkAvailability(name);
     }
 
@@ -17,7 +18,11 @@ public class Product {
         return name;
     }
 
-    public boolean getAvailability() {
+    public boolean isAvailable() {
         return availability;
+    }
+
+    public Storage getStorage() {
+        return storage;
     }
 }
