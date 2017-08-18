@@ -2,6 +2,7 @@ package com.kodilla.testing.forum.statistics;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.mockito.Matchers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -838,4 +839,30 @@ public class StatisticsTestSuite {
         System.out.println("7 gdy liczba użytkowników = 100");
         Assert.assertEquals(0.1, commentsPerUser, 0);
     }
+
+
+
+
+    @Test
+    public void testCalcul() {
+        //Given
+        Statistics statistics = mock(Statistics.class);
+        List<String> usersNames = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            usersNames.add("aaa" + i);
+        }
+        int number = 0;
+        when(statistics.method(Matchers.anyInt())).thenReturn(10);
+        when(statistics.postsCount()).thenReturn(100);
+        when(statistics.usersNames()).thenReturn(usersNames);
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
+        //When
+        statisticsCalculator.calculateAdvStatistics(statistics);
+        double commentsPerUser = statisticsCalculator.getCommentsPerUser();
+        //Then
+        System.out.println("7 gdy liczba użytkowników = 100");
+        Assert.assertEquals(0.1, commentsPerUser, 0);
+    }
+
+
 }
