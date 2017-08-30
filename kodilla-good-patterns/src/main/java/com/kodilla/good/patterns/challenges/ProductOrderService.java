@@ -14,11 +14,21 @@ public class ProductOrderService {
         } else {
             System.out.println(" zamówienie niezrealizowane");
         }
-        Order order1=orderRetriever.retrieve();
-        orderProcessor.process(order1);
+
+/*
+        System.out.println("------------------------------");
         Order order2=orderRetriever.retrieve();
         orderProcessor.process(order2);
+        System.out.println("------------------------------");
         Order order3=orderRetriever.retrieve();
         orderProcessor.process(order3);
+        System.out.println("------------------------------");
+        Order order4=orderRetriever.retrieve();
+        orderProcessor.process(order4);
+        System.out.println("------------------------------");
+        Order order5=orderRetriever.retrieve();
+        orderProcessor.process(order5);
+
+        */
     }
 }

@@ -7,7 +7,7 @@ public class OrderRetriever {
 
     public Order retrieve(){
         User user=new User("Józef K.","pensjonat pani Grubach", "józio@k.cz");
-        Product product=new Product("krzyżówki",new StorageOne());
+        Product product=new Product("krzyżówki", new StorageOne());
         return new Order(user, product);
     }
 }

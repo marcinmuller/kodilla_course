@@ -6,6 +6,6 @@ package com.kodilla.good.patterns.challenges;
 public class InventoryBalanceImpl implements InventoryBalanceService {
     public void updateInventoryBalance(Order order){
         order.getProduct().getStorage().inventoryBalanceRefreshment();
-        System.out.println("Zaktualizowano stan magazynowy : "+order.getProduct().getName());
+        System.out.println("Zaktualizowano stan magazynowy : "+order.getProduct().getName()+" = "+order.getProduct().getStorage().getNumber());
     }
 }
