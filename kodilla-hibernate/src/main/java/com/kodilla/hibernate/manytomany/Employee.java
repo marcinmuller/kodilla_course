@@ -9,6 +9,11 @@ import java.util.List;
  * Created by Marcin Muller on 06.09.17.
  */
 
+@NamedQuery(
+        name = "Employee.retrieveEmployeeByLastname",
+        query = "FROM Employee WHERE lastname = :LASTNAME"
+)
+
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
