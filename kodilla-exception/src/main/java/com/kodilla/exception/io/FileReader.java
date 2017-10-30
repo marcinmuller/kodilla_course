@@ -9,9 +9,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-/**
- * Created by Marcin Muller on 02.08.17.
- */
 public class FileReader {
     public void readFile() throws FileReaderException{
         ClassLoader classLoader=getClass().getClassLoader();

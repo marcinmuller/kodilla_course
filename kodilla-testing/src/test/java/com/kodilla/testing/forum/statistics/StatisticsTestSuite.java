@@ -842,7 +842,7 @@ public class StatisticsTestSuite {
 
 
 
-
+/*
     @Test
     public void testCalcul() {
         //Given
@@ -863,6 +863,6 @@ public class StatisticsTestSuite {
         System.out.println("7 gdy liczba użytkowników = 100");
         Assert.assertEquals(0.1, commentsPerUser, 0);
     }
-
+*/
 
 }

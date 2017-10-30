@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.world.WorldTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-10-28T18:39:24" hostname="iliak-HP-15-Notebook-PC" time="0.004">
+  <properties/>
+  <testcase name="testGetPeopleQuantity" classname="com.kodilla.stream.world.WorldTestSuite" time="0.004"/>
+  <system-out><![CDATA[216000000
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
