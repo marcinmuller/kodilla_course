@@ -15,7 +15,7 @@ public class DbManagerTestSuite {
         //Then
         Assert.assertNotNull(dbManager.getConnection());
     }
-    /*
+
     @Test
     public void testSelectUsers() throws SQLException {
         //Given
@@ -38,8 +38,8 @@ public class DbManagerTestSuite {
         statement.close();
         Assert.assertEquals(5, counter);
     }
-*/
-    /*
+
+
     @Test
     public void testSelectUsersAndPosts() throws SQLException{
         //given
@@ -59,6 +59,6 @@ public class DbManagerTestSuite {
         Assert.assertEquals(1,counter);
     }
 
-    */
+
 }
 
