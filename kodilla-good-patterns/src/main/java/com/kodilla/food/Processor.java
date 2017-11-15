@@ -1,7 +1,11 @@
 package com.kodilla.food;
 
-/**
- * Created by Marcin Muller on 08.09.17.
- */
+
 public class Processor {
+    public void showProducts(Shop shop){
+        System.out.println(shop.getName());
+        for (Product p: shop.getProductList()){
+            System.out.println(p.getName()+" "+p.getPrice());
+        }
+    }
 }

@@ -1,9 +1,10 @@
 package com.kodilla.food;
 
-/**
- * Created by Marcin Muller on 08.09.17.
- */
+
+import java.util.List;
+
 public interface Shop {
-    public String name();
+    public String getName();
     public boolean process();
+    public List<Product> getProductList();
 }
