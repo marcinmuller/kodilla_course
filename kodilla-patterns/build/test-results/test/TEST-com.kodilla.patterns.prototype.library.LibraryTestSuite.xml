@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-01T06:47:38" hostname="iliak-HP-15-Notebook-PC" time="0.035">
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-16T11:56:53" hostname="iliak-HP-15-Notebook-PC" time="0.018">
   <properties/>
-  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.035"/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.018"/>
   <system-out><![CDATA[Biblioteka
-Book{title='książka nr 7', author='autor nr 7', publicationDate=1900-01-01}
-Book{title='książka nr 8', author='autor nr 8', publicationDate=1900-01-01}
 Book{title='książka nr 9', author='autor nr 9', publicationDate=1900-01-01}
-Book{title='książka nr 2', author='autor nr 2', publicationDate=1900-01-01}
-Book{title='książka nr 3', author='autor nr 3', publicationDate=1900-01-01}
-Book{title='książka nr 5', author='autor nr 5', publicationDate=1900-01-01}
-Book{title='książka nr 6', author='autor nr 6', publicationDate=1900-01-01}
+Book{title='książka nr 8', author='autor nr 8', publicationDate=1900-01-01}
 Book{title='książka nr 1', author='autor nr 1', publicationDate=1900-01-01}
+Book{title='książka nr 7', author='autor nr 7', publicationDate=1900-01-01}
+Book{title='książka nr 3', author='autor nr 3', publicationDate=1900-01-01}
 Book{title='książka nr 4', author='autor nr 4', publicationDate=1900-01-01}
+Book{title='książka nr 5', author='autor nr 5', publicationDate=1900-01-01}
+Book{title='książka nr 2', author='autor nr 2', publicationDate=1900-01-01}
+Book{title='książka nr 6', author='autor nr 6', publicationDate=1900-01-01}
 ------------------------------------
 Biblioteka
-Book{title='książka nr 7', author='autor nr 7', publicationDate=1900-01-01}
-Book{title='książka nr 8', author='autor nr 8', publicationDate=1900-01-01}
 Book{title='książka nr 9', author='autor nr 9', publicationDate=1900-01-01}
+Book{title='książka nr 8', author='autor nr 8', publicationDate=1900-01-01}
+Book{title='książka nr 1', author='autor nr 1', publicationDate=1900-01-01}
+Book{title='książka nr 7', author='autor nr 7', publicationDate=1900-01-01}
 Book{title='dodana1', author='dodany1', publicationDate=1900-01-01}
 Book{title='dodana2', author='dodany2', publicationDate=1900-01-01}
-Book{title='książka nr 2', author='autor nr 2', publicationDate=1900-01-01}
 Book{title='książka nr 3', author='autor nr 3', publicationDate=1900-01-01}
-Book{title='książka nr 5', author='autor nr 5', publicationDate=1900-01-01}
-Book{title='książka nr 6', author='autor nr 6', publicationDate=1900-01-01}
-Book{title='książka nr 1', author='autor nr 1', publicationDate=1900-01-01}
 Book{title='książka nr 4', author='autor nr 4', publicationDate=1900-01-01}
+Book{title='książka nr 5', author='autor nr 5', publicationDate=1900-01-01}
+Book{title='książka nr 2', author='autor nr 2', publicationDate=1900-01-01}
+Book{title='książka nr 6', author='autor nr 6', publicationDate=1900-01-01}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

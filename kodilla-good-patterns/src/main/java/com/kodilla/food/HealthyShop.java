@@ -9,7 +9,7 @@ import java.util.List;
 public class HealthyShop implements Shop {
     private String name="HealthyShop";
     private List<Product> productList = new ArrayList<>();
-    private List<Item> itemList = new ArrayList<>();
+//    private List<Item> itemList = new ArrayList<>();
 
     @Override
     public List<Product> getProductList() {
