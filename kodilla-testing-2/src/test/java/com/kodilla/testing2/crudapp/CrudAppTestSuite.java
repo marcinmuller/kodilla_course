@@ -63,9 +63,12 @@ public class CrudAppTestSuite {
     }
 
     private String createCrudAppTestTask() throws InterruptedException{
-        final String XPATH_TASK_NAME="//form[contains(@action, \"createTask\")]/fieldset[1]/input";
-        final String XPATH_TASK_CONTENT="//form[contains(@action, \"createTask\")]/fieldset[2]/textarea";
-        final String XPATH_ADD_BUTTON="//form[contains(@action, \"createTask\")]/fieldset[3]/button";
+//        final String XPATH_TASK_NAME="//form[contains(@action, \"createTask\")]/fieldset[1]/input";
+        final String XPATH_TASK_NAME="//form[contains(@action, \"task\")]/fieldset[1]/input";
+//        final String XPATH_TASK_CONTENT="//form[contains(@action, \"createTask\")]/fieldset[2]/textarea";
+        final String XPATH_TASK_CONTENT="//form[contains(@action, \"task\")]/fieldset[2]/textarea";
+//        final String XPATH_ADD_BUTTON="//form[contains(@action, \"createTask\")]/fieldset[3]/button";
+        final String XPATH_ADD_BUTTON="//form[contains(@action, \"task\")]/fieldset[3]/button";
         String taskName = "task #"+generator.nextInt(100000);
         String taskContent = taskName+" content";
 
@@ -108,8 +111,8 @@ public class CrudAppTestSuite {
         WebDriver driverTrello = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driverTrello.get(TRELLO_URL);
 
-        driverTrello.findElement(By.id("user")).sendKeys("mmuller@go2.pl");
-        driverTrello.findElement(By.id("password")).sendKeys("Kodilla444");
+        driverTrello.findElement(By.id("user")).sendKeys("mmuller@o2.pl");
+        driverTrello.findElement(By.id("password")).sendKeys("Dupa6666");
         driverTrello.findElement(By.id("login")).submit();
 
         Thread.sleep(2000);
@@ -120,7 +123,7 @@ public class CrudAppTestSuite {
 
         Thread.sleep(5000);
 
-//        result = driverTrello.findElements(By.xpath("//span")).stream()
+     //           result = driverTrello.findElements(By.xpath("//span")).stream()
         result = driverTrello.findElements(By.xpath("//a[@class=\"list-card js-member-droppable ui-droppable\"]")).stream()
                 .filter(theSpan->theSpan.getText().contains(taskName))
                 .collect(Collectors.toList())

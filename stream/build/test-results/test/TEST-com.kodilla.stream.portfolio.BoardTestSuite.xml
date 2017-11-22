@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.portfolio.BoardTestSuite" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-01T06:47:48" hostname="iliak-HP-15-Notebook-PC" time="0.084">
+<testsuite name="com.kodilla.stream.portfolio.BoardTestSuite" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-22T00:19:17" hostname="iliak-HP-15-Notebook-PC" time="0.088">
   <properties/>
-  <testcase name="testAddTaskList" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.043"/>
-  <testcase name="testAddTaskListAverageWorkingOnTask" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.024"/>
+  <testcase name="testAddTaskList" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.04"/>
+  <testcase name="testAddTaskListAverageWorkingOnTask" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.035"/>
   <testcase name="testAddTaskListFindUsersTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.003"/>
   <testcase name="testAddTaskListFindLongTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.003"/>
-  <testcase name="testAddTaskListAverageWorkingOnTask1" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.009"/>
+  <testcase name="testAddTaskListAverageWorkingOnTask1" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.007"/>
   <system-out><![CDATA[średnia ilość dni to 10
 średnia to 10.0
 ]]></system-out>

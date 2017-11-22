@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">43.757s</div>
+<div class="counter">53.552s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,15 +76,17 @@
 <a name="shouldCreateTrelloCard"></a>
 <h3 class="failures">shouldCreateTrelloCard</h3>
 <span class="code">
-<pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;button type=&quot;button&quot; data-trello-card-creation-trigger=&quot;&quot; class=&quot;datatable__button datatable__button--card-creation&quot;&gt;...&lt;/button&gt; is not clickable at point (863, 606). Other element would receive the click: &lt;select class=&quot;datatable__select&quot; name=&quot;board-name&quot; data-board-name-select=&quot;&quot;&gt;...&lt;/select&gt;
+<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//form[contains(@action, &quot;createTask&quot;)]/fieldset[1]/input&quot;}
   (Session info: chrome=61.0.3163.100)
   (Driver info: chromedriver=2.30.477691 (6ee44a7247c639c0703f291d320bdf05c1531b57),platform=Linux 3.19.0-32-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
 System info: host: 'iliak-HP-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.19.0-32-generic', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.30.477691 (6ee44a7247c639..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 61.0.3163.100, webStorageEnabled: true}
-Session ID: a74bdf04db5cf90c08d9ac79fc73779f
+Session ID: abf315318d054b833a52e53c444d5495
+*** Element info: {Using=xpath, value=//form[contains(@action, &quot;createTask&quot;)]/fieldset[1]/input}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -97,20 +99,12 @@ Session ID: a74bdf04db5cf90c08d9ac79fc73779f
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at com.kodilla.testing2.crudapp.CrudAppTestSuite.lambda$sendTestTaskToTrello$1(CrudAppTestSuite.java:76)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1380)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.kodilla.testing2.crudapp.CrudAppTestSuite.sendTestTaskToTrello(CrudAppTestSuite.java:70)
-	at com.kodilla.testing2.crudapp.CrudAppTestSuite.shouldCreateTrelloCard(CrudAppTestSuite.java:58)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.kodilla.testing2.crudapp.CrudAppTestSuite.createCrudAppTestTask(CrudAppTestSuite.java:72)
+	at com.kodilla.testing2.crudapp.CrudAppTestSuite.shouldCreateTrelloCard(CrudAppTestSuite.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,7 +168,7 @@ Session ID: a74bdf04db5cf90c08d9ac79fc73779f
 </thead>
 <tr>
 <td class="failures">shouldCreateTrelloCard</td>
-<td>43.757s</td>
+<td>53.552s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -182,9 +176,9 @@ Session ID: a74bdf04db5cf90c08d9ac79fc73779f
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 2.30.477691 (6ee44a7247c639c0703f291d320bdf05c1531b57) on port 10022
+<pre>Starting ChromeDriver 2.30.477691 (6ee44a7247c639c0703f291d320bdf05c1531b57) on port 15685
 Only local connections are allowed.
-lis 16, 2017 12:57:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+lis 22, 2017 1:05:32 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
 </pre>
 </span>
@@ -197,7 +191,7 @@ INFO: Detected dialect: OSS
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 3.5.1</a> at 2017-11-16 12:57:50</p>
+<a href="http://www.gradle.org">Gradle 3.5.1</a> at 2017-11-22 01:05:37</p>
 </div>
 </div>
 </body>
