@@ -1,4 +1,4 @@
-package com.kodilla.testing2.crudapp;
+/*package com.kodilla.testing2.crudapp;
 
 import com.kodilla.testing2.google.config.WebDriverConfig;
 import org.junit.After;
@@ -17,6 +17,8 @@ import java.util.stream.Collectors;
 /**
  * Created by Marcin Muller on 15.11.17.
  */
+
+/*
 public class CrudAppTestSuite {
     private static final String BASE_URL="http://marcinmuller.github.io/";
     private WebDriver driver;
@@ -134,3 +136,4 @@ public class CrudAppTestSuite {
         return result;
     }
 }
+*/

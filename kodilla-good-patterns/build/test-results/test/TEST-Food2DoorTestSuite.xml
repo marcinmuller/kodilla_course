@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Food2DoorTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-11-22T04:08:17" hostname="iliak-HP-15-Notebook-PC" time="0.01">
+  <properties/>
+  <testcase name="testProductInExtraFoodShop" classname="Food2DoorTestSuite" time="0.005"/>
+  <testcase name="testLackInHealthyFoodShop" classname="Food2DoorTestSuite" time="0.002"/>
+  <testcase name="testProductInHealthyShop" classname="Food2DoorTestSuite" time="0.001"/>
+  <testcase name="testLackInExtraFoodShop" classname="Food2DoorTestSuite" time="0.001"/>
+  <system-out><![CDATA[---------------
+ExtraFoodShop
+mydło 5.0zł
+powidło 7.0zł
+
+1x mydło 5.0zł
+---------------
+ExtraFoodShop
+powidło 7.0zł
+mydło 5.0zł
+
+lack of mydło availability
+---------------
+ExtraFoodShop
+mydło 5.0zł
+powidło 7.0zł
+
+1x mydło 5.0zł
+---------------
+ExtraFoodShop
+mydło 5.0zł
+powidło 7.0zł
+
+lack of dzynks availability
+2x mydło 10.0zł
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
