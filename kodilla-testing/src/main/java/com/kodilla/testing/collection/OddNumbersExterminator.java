@@ -1,7 +1,6 @@
 package com.kodilla.testing.collection;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Marcin Muller on 13.07.17.

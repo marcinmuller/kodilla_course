@@ -1,7 +1,5 @@
 package com.kodilla.good.patterns.challenges;
 
-import java.util.Random;
-
 /**
  * Created by Marcin Muller on 07.08.17.
  */

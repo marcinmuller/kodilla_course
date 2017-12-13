@@ -8,9 +8,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 /**
  * Created by Marcin Muller on 13.08.17.
  */

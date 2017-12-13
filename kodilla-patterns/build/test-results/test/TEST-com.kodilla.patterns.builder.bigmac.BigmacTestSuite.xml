@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-11-16T11:56:53" hostname="iliak-HP-15-Notebook-PC" time="0.003">
+<testsuite name="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-12-13T18:12:55" hostname="iliak-HP-15-Notebook-PC" time="0.006">
   <properties/>
-  <testcase name="testBigmacSauce" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.001"/>
+  <testcase name="testBigmacSauce" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.003"/>
   <testcase name="testBigmacRoll" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.0"/>
   <testcase name="testBigmacCountBurgers" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.0"/>
   <testcase name="testBigmacIngredients" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.0"/>

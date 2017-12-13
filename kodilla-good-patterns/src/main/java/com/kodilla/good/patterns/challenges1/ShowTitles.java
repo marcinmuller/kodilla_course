@@ -1,8 +1,5 @@
 package com.kodilla.good.patterns.challenges1;
 
-import com.kodilla.good.patterns.challenges1.MovieStore;
-
-import java.util.stream.Stream;
 
 public class ShowTitles {
     public static void main(String[] args) {

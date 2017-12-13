@@ -1,11 +1,9 @@
 package com.kodilla.spring.portfolio;
 
-import org.springframework.stereotype.Component;
 
 /**
  * Created by Marcin Muller on 14.08.17.
  */
-//@Component
 public class Board {
     private TaskList toDoList;
     private TaskList inProgressList;

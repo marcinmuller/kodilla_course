@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-16T11:56:53" hostname="iliak-HP-15-Notebook-PC" time="0.018">
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-12-13T18:12:54" hostname="iliak-HP-15-Notebook-PC" time="0.319">
   <properties/>
-  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.018"/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.319"/>
   <system-out><![CDATA[Biblioteka
 Book{title='książka nr 9', author='autor nr 9', publicationDate=1900-01-01}
 Book{title='książka nr 8', author='autor nr 8', publicationDate=1900-01-01}

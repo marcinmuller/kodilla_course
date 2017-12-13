@@ -34,7 +34,6 @@ public class TaskDaoTestSuite {
 
         //CleanUp
         taskDao.delete(id);
-//        taskDao.deleteAll();
     }
     @Test
     public void testTaskDaoFindByDuration() {
@@ -52,7 +51,6 @@ public class TaskDaoTestSuite {
         //CleanUp
         int id = readTasks.get(0).getId();
         taskDao.delete(id);
-//        taskDao.deleteAll();
 
     }
     @Test

@@ -1,7 +1,6 @@
 package com.kodilla.stream;
 
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
 import com.kodilla.stream.forum.Forum;
 import com.kodilla.stream.forum.ForumUser;
 import java.time.LocalDate;

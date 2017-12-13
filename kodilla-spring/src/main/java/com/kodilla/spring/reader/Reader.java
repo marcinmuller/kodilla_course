@@ -1,6 +1,5 @@
 package com.kodilla.spring.reader;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 public final class Reader {
     final Book theBook;

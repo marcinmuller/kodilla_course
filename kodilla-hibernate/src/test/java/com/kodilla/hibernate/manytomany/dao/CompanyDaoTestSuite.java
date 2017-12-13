@@ -4,14 +4,12 @@ import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
 import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -34,14 +32,6 @@ public class CompanyDaoTestSuite {
     @Test
     public void testSaveManyToMany(){
         //Given
-//        Employee johnSmith = new Employee("John", "Smith");
-//        Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
-//        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
-//
-//        Company softwareMachine = new Company("Software Machine");
-//        Company dataMaesters = new Company("Data Maesters");
-//        Company greyMatter = new Company("Grey Matter");
-
         softwareMachine.getEmployees().add(johnSmith);
         dataMaesters.getEmployees().add(stephanieClarckson);
         dataMaesters.getEmployees().add(lindaKovalsky);
@@ -67,20 +57,10 @@ public class CompanyDaoTestSuite {
         Assert.assertNotEquals(0, dataMaestersId);
         Assert.assertNotEquals(0, greyMatterId);
 
-        //CleanUp
-//                try {
-//                companyDao.delete(softwareMachineId);
-//                companyDao.delete(dataMaestersId);
-//                companyDao.delete(greyMatterId);
-//            } catch (Exception e) {
-//            }
         }
     @Test
     public void testNamedQuery(){
         //given
-//        Employee johnSmith = new Employee("John", "Smith");
-//        Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
-//        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
         employeeDao.save(johnSmith);
         employeeDao.save(stephanieClarckson);
         employeeDao.save(lindaKovalsky);
@@ -88,21 +68,10 @@ public class CompanyDaoTestSuite {
         List<Employee> byLastnameResult=employeeDao.retrieveEmployeeByLastname("Smith");
         //then
         Assert.assertTrue(byLastnameResult.size()>0);
-        //cleanup
-//        try{
-//            employeeDao.delete(johnSmith);
-//            employeeDao.delete(stephanieClarckson);
-//            employeeDao.delete(lindaKovalsky);
-//        }catch (Exception e){
-//
-//        }
     }
     @Test
     public void testNamedNativeQuery(){
         //given
-//        Company softwareMachine = new Company("Software Machine");
-//        Company dataMaesters = new Company("Data Maesters");
-//        Company greyMatter = new Company("Grey Matter");
         companyDao.save(softwareMachine);
         companyDao.save(dataMaesters);
         companyDao.save(greyMatter);
@@ -110,14 +79,6 @@ public class CompanyDaoTestSuite {
         List<Company> beginigWith=companyDao.retrieveCompaniesBeginigWith("Sof");
         //then
         Assert.assertTrue(beginigWith.size()>0);
-        //cleanup
-//        try{
-//            companyDao.delete(softwareMachine);
-//            companyDao.delete(dataMaesters);
-//            companyDao.delete(greyMatter);
-//        }catch (Exception e){
-//
-//        }
     }
     @After
     public void cleanUp(){
